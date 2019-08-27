@@ -12,11 +12,10 @@ eureka:
 
 zuul:
   retryable: true
-
     
 ribbon:
   ConnectTimeout: 1000
-  ReadTimeout: 1000
+  ReadTimeout: 2000
   MaxAutoRetriesNextServer: 1
   MaxAutoRetries: 1
   
@@ -27,7 +26,7 @@ hystrix:
         isolation:
           thread:
             timeoutInMilliseconds: 500
-
+            
 management:
   endpoints:
     web:
