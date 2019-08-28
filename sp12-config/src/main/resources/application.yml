@@ -6,14 +6,19 @@ spring:
     config:
       server:
         git:
-          ur: https://github.com/192.168.72.131/config
+          uri: https://github.com/koogyanshaowen/config
           searchPaths: config
-          username: root
-          password: root
+    
+  rabbitmq:
+    host: 192.168.72.131
+    port: 5672
+    username: admin
+    password: admin
+
     
 server:
   port: 6001
-   
+    
 eureka:
   client:
     service-url:
@@ -23,4 +28,4 @@ management:
   endpoints:
     web:
       exposure:
-        
+        include:
